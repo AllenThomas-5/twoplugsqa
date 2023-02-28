@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class InitialTest { 
+	
 	WebDriver driver;
 	String rootPath;
 	Logger log = LogManager.getLogger(InitialTest.class);

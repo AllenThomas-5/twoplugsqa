@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
+<suite name="Two Plugs Automation Test">
+  <test thread-count="1" name="Test">
+  <parameter name="username" value="Linet"/>
+  <parameter name="password" value="twoplugs2" />
     <classes>
-      <class name="com.twoplugs.test.InitialTest"/>
+    <!-- <class name="com.twoplugs.test.InitialTest"/>  -->
+  	<class name="com.twoplugs.test.TP_002_Login_Valid_EmailPassword"/> 
+    <class name="com.twoplugs.test.TP_003_Invalid_User_Login"/> 
+     <class name="com.twoplugs.test.TP_004_Search_for_Service"/> 
+      <class name="com.twoplugs.test.TP001_Singup_Invalid_User"/> 
+
+
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

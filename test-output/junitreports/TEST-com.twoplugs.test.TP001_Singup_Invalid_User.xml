@@ -1,91 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="4" failed="3" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2023-02-28T00:20:52 EST" name="Two Plugs Automation Test" finished-at="2023-02-28T00:21:22 EST" duration-ms="30343">
-    <groups>
-    </groups>
-    <test started-at="2023-02-28T00:20:52 EST" name="Test" finished-at="2023-02-28T00:21:22 EST" duration-ms="30343">
-      <class name="com.twoplugs.test.TP_003_Invalid_User_Login">
-        <test-method is-config="true" signature="loadLoginPage()[pri:0, instance:com.twoplugs.test.TP_003_Invalid_User_Login@5b7ea70d]" started-at="2023-02-28T00:20:47 EST" name="loadLoginPage" finished-at="2023-02-28T00:20:49 EST" duration-ms="2018" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadLoginPage -->
-        <test-method signature="signupInvalidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP_003_Invalid_User_Login@5b7ea70d]" started-at="2023-02-28T00:20:58 EST" name="signupInvalidUsername" data-provider="InvalidLoginData" finished-at="2023-02-28T00:21:03 EST" duration-ms="5652" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1234@123.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signupInvalidUsername -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.twoplugs.test.TP_003_Invalid_User_Login@5b7ea70d]" started-at="2023-02-28T00:21:28 EST" name="closeApplication" finished-at="2023-02-28T00:21:32 EST" duration-ms="3188" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApplication -->
-      </class> <!-- com.twoplugs.test.TP_003_Invalid_User_Login -->
-      <class name="com.twoplugs.test.TP_004_Search_for_Service">
-        <test-method is-config="true" signature="loadLoginPage()[pri:0, instance:com.twoplugs.test.TP_004_Search_for_Service@2bef51f2]" started-at="2023-02-28T00:20:49 EST" name="loadLoginPage" finished-at="2023-02-28T00:20:52 EST" duration-ms="2174" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadLoginPage -->
-        <test-method signature="loginValidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP_004_Search_for_Service@2bef51f2]" started-at="2023-02-28T00:21:03 EST" name="loginValidUsername" data-provider="ValidLoginData" finished-at="2023-02-28T00:21:09 EST" duration-ms="5086" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Linet]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[twoplugs2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginValidUsername -->
-        <test-method signature="searchForServices()[pri:0, instance:com.twoplugs.test.TP_004_Search_for_Service@2bef51f2]" started-at="2023-02-28T00:21:09 EST" name="searchForServices" finished-at="2023-02-28T00:21:14 EST" duration-ms="5542" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchForServices -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.twoplugs.test.TP_004_Search_for_Service@2bef51f2]" started-at="2023-02-28T00:21:32 EST" name="closeApplication" finished-at="2023-02-28T00:21:35 EST" duration-ms="3215" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApplication -->
-      </class> <!-- com.twoplugs.test.TP_004_Search_for_Service -->
-      <class name="com.twoplugs.test.TP001_Singup_Invalid_User">
-        <test-method is-config="true" signature="loadSignUpPage()[pri:0, instance:com.twoplugs.test.TP001_Singup_Invalid_User@650eab8]" started-at="2023-02-28T00:20:42 EST" name="loadSignUpPage" finished-at="2023-02-28T00:20:45 EST" duration-ms="3561" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadSignUpPage -->
-        <test-method signature="signupInvalidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP001_Singup_Invalid_User@650eab8]" started-at="2023-02-28T00:21:14 EST" name="signupInvalidUsername" data-provider="signUpData" finished-at="2023-02-28T00:21:17 EST" duration-ms="2712" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1234@123.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[No Alert Message]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: No Alert Message
+<!-- Generated by org.testng.reporters.JUnitReportReporter -->
+<testsuite hostname="DESKTOP-7MPKD8K" failures="3" tests="3" name="com.twoplugs.test.TP001_Singup_Invalid_User" time="7.730" errors="0" timestamp="2023-02-28T00:21:35 EST" skipped="0">
+  <testcase classname="com.twoplugs.test.TP001_Singup_Invalid_User" name="signupInvalidUsername" time="2.496">
+    <failure message="No Alert Message" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: No Alert Message
 at org.testng.Assert.fail(Assert.java:85)
 at com.twoplugs.test.TP001_Singup_Invalid_User.signupInvalidUsername(TP001_Singup_Invalid_User.java:68)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -144,30 +62,12 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at com.twoplugs.test.TP001_Singup_Invalid_User.signupInvalidUsername(TP001_Singup_Invalid_User.java:62)
 ... 28 more
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signupInvalidUsername -->
-        <test-method signature="signupInvalidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP001_Singup_Invalid_User@650eab8]" started-at="2023-02-28T00:21:17 EST" name="signupInvalidUsername" data-provider="signUpData" finished-at="2023-02-28T00:21:19 EST" duration-ms="2522" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[!@##$%^]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[abcdefg]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[No Alert Message]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: No Alert Message
+    </failure>
+  </testcase> <!-- signupInvalidUsername -->
+  <system-out/>
+  <testcase classname="com.twoplugs.test.TP001_Singup_Invalid_User" name="signupInvalidUsername" time="2.522">
+    <failure message="No Alert Message" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: No Alert Message
 at org.testng.Assert.fail(Assert.java:85)
 at com.twoplugs.test.TP001_Singup_Invalid_User.signupInvalidUsername(TP001_Singup_Invalid_User.java:68)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -226,30 +126,12 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at com.twoplugs.test.TP001_Singup_Invalid_User.signupInvalidUsername(TP001_Singup_Invalid_User.java:62)
 ... 28 more
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signupInvalidUsername -->
-        <test-method signature="signupInvalidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP001_Singup_Invalid_User@650eab8]" started-at="2023-02-28T00:21:19 EST" name="signupInvalidUsername" data-provider="signUpData" finished-at="2023-02-28T00:21:22 EST" duration-ms="2496" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[@#$%^^((&^(]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[No Alert Message]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: No Alert Message
+    </failure>
+  </testcase> <!-- signupInvalidUsername -->
+  <system-out/>
+  <testcase classname="com.twoplugs.test.TP001_Singup_Invalid_User" name="signupInvalidUsername" time="2.712">
+    <failure message="No Alert Message" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: No Alert Message
 at org.testng.Assert.fail(Assert.java:85)
 at com.twoplugs.test.TP001_Singup_Invalid_User.signupInvalidUsername(TP001_Singup_Invalid_User.java:68)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -308,42 +190,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at com.twoplugs.test.TP001_Singup_Invalid_User.signupInvalidUsername(TP001_Singup_Invalid_User.java:62)
 ... 28 more
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signupInvalidUsername -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.twoplugs.test.TP001_Singup_Invalid_User@650eab8]" started-at="2023-02-28T00:21:22 EST" name="closeApplication" finished-at="2023-02-28T00:21:25 EST" duration-ms="3196" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApplication -->
-      </class> <!-- com.twoplugs.test.TP001_Singup_Invalid_User -->
-      <class name="com.twoplugs.test.TP_002_Login_Valid_EmailPassword">
-        <test-method is-config="true" signature="loadLoginPage()[pri:0, instance:com.twoplugs.test.TP_002_Login_Valid_EmailPassword@652a7737]" started-at="2023-02-28T00:20:45 EST" name="loadLoginPage" finished-at="2023-02-28T00:20:47 EST" duration-ms="2011" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadLoginPage -->
-        <test-method signature="loginValidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP_002_Login_Valid_EmailPassword@652a7737]" started-at="2023-02-28T00:20:52 EST" name="loginValidUsername" data-provider="ValidLoginData" finished-at="2023-02-28T00:20:58 EST" duration-ms="6251" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Linet]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[twoplugs2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginValidUsername -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.twoplugs.test.TP_002_Login_Valid_EmailPassword@652a7737]" started-at="2023-02-28T00:21:25 EST" name="closeApplication" finished-at="2023-02-28T00:21:28 EST" duration-ms="3219" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApplication -->
-      </class> <!-- com.twoplugs.test.TP_002_Login_Valid_EmailPassword -->
-    </test> <!-- Test -->
-  </suite> <!-- Two Plugs Automation Test -->
-</testng-results>
+    </failure>
+  </testcase> <!-- signupInvalidUsername -->
+  <system-out/>
+</testsuite> <!-- com.twoplugs.test.TP001_Singup_Invalid_User -->

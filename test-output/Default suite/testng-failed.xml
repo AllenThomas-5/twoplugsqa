@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Webtest">
+      <class name="com.twoplugs.test.TP001_Singup_Invalid_User">
         <methods>
-          <include name="test1"/>
+          <include name="closeApplication"/>
+          <include name="signupInvalidUsername"/>
+          <include name="loadLoginPage"/>
         </methods>
-      </class> <!-- Webtest -->
+      </class> <!-- com.twoplugs.test.TP001_Singup_Invalid_User -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
