@@ -1,43 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="4" failed="3" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-28T00:20:52 EST" name="Two Plugs Automation Test" finished-at="2023-02-28T00:21:22 EST" duration-ms="30343">
+  <suite started-at="2023-03-07T12:29:40 EST" name="Default suite" finished-at="2023-03-07T12:29:47 EST" duration-ms="7582">
     <groups>
     </groups>
-    <test started-at="2023-02-28T00:20:52 EST" name="Test" finished-at="2023-02-28T00:21:22 EST" duration-ms="30343">
-      <class name="com.twoplugs.test.TP_003_Invalid_User_Login">
-        <test-method is-config="true" signature="loadLoginPage()[pri:0, instance:com.twoplugs.test.TP_003_Invalid_User_Login@5b7ea70d]" started-at="2023-02-28T00:20:47 EST" name="loadLoginPage" finished-at="2023-02-28T00:20:49 EST" duration-ms="2018" status="PASS">
+    <test started-at="2023-03-07T12:29:40 EST" name="Default test" finished-at="2023-03-07T12:29:47 EST" duration-ms="7582">
+      <class name="com.twoplugs.test.TP_007_Create_Update_Delete_Service">
+        <test-method is-config="true" signature="loadLoginPage()[pri:0, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:35 EST" name="loadLoginPage" finished-at="2023-03-07T12:29:40 EST" duration-ms="4667" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadLoginPage -->
-        <test-method signature="signupInvalidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP_003_Invalid_User_Login@5b7ea70d]" started-at="2023-02-28T00:20:58 EST" name="signupInvalidUsername" data-provider="InvalidLoginData" finished-at="2023-02-28T00:21:03 EST" duration-ms="5652" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1234@123.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signupInvalidUsername -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.twoplugs.test.TP_003_Invalid_User_Login@5b7ea70d]" started-at="2023-02-28T00:21:28 EST" name="closeApplication" finished-at="2023-02-28T00:21:32 EST" duration-ms="3188" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApplication -->
-      </class> <!-- com.twoplugs.test.TP_003_Invalid_User_Login -->
-      <class name="com.twoplugs.test.TP_004_Search_for_Service">
-        <test-method is-config="true" signature="loadLoginPage()[pri:0, instance:com.twoplugs.test.TP_004_Search_for_Service@2bef51f2]" started-at="2023-02-28T00:20:49 EST" name="loadLoginPage" finished-at="2023-02-28T00:20:52 EST" duration-ms="2174" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadLoginPage -->
-        <test-method signature="loginValidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP_004_Search_for_Service@2bef51f2]" started-at="2023-02-28T00:21:03 EST" name="loginValidUsername" data-provider="ValidLoginData" finished-at="2023-02-28T00:21:09 EST" duration-ms="5086" status="PASS">
+        <test-method signature="loginValidUsername(java.lang.String, java.lang.String)[pri:1, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:40 EST" name="loginValidUsername" data-provider="ValidLoginData" finished-at="2023-03-07T12:29:43 EST" duration-ms="3180" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,297 +27,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidUsername -->
-        <test-method signature="searchForServices()[pri:0, instance:com.twoplugs.test.TP_004_Search_for_Service@2bef51f2]" started-at="2023-02-28T00:21:09 EST" name="searchForServices" finished-at="2023-02-28T00:21:14 EST" duration-ms="5542" status="PASS">
+        <test-method signature="goToProfilePage()[pri:2, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:43 EST" name="goToProfilePage" finished-at="2023-03-07T12:29:43 EST" duration-ms="370" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchForServices -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.twoplugs.test.TP_004_Search_for_Service@2bef51f2]" started-at="2023-02-28T00:21:32 EST" name="closeApplication" finished-at="2023-02-28T00:21:35 EST" duration-ms="3215" status="PASS">
+        </test-method> <!-- goToProfilePage -->
+        <test-method signature="creatNewService()[pri:3, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:43 EST" name="creatNewService" finished-at="2023-03-07T12:29:46 EST" duration-ms="2111" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeApplication -->
-      </class> <!-- com.twoplugs.test.TP_004_Search_for_Service -->
-      <class name="com.twoplugs.test.TP001_Singup_Invalid_User">
-        <test-method is-config="true" signature="loadSignUpPage()[pri:0, instance:com.twoplugs.test.TP001_Singup_Invalid_User@650eab8]" started-at="2023-02-28T00:20:42 EST" name="loadSignUpPage" finished-at="2023-02-28T00:20:45 EST" duration-ms="3561" status="PASS">
+        </test-method> <!-- creatNewService -->
+        <test-method signature="editService()[pri:4, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:46 EST" name="editService" finished-at="2023-03-07T12:29:46 EST" duration-ms="887" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loadSignUpPage -->
-        <test-method signature="signupInvalidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP001_Singup_Invalid_User@650eab8]" started-at="2023-02-28T00:21:14 EST" name="signupInvalidUsername" data-provider="signUpData" finished-at="2023-02-28T00:21:17 EST" duration-ms="2712" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1234@123.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[No Alert Message]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: No Alert Message
-at org.testng.Assert.fail(Assert.java:85)
-at com.twoplugs.test.TP001_Singup_Invalid_User.signupInvalidUsername(TP001_Singup_Invalid_User.java:68)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='alert alert-danger text-center']"}
-  (Session info: chrome=110.0.5481.178)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.0', revision: '87802e897b'
-System info: host: 'DESKTOP-7MPKD8K', ip: '10.0.0.93', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5f597cf9aff19643c494007adf2636ae, findElement {using=xpath, value=//div[@class='alert alert-danger text-center']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\USER\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52533}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52533/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5f597cf9aff19643c494007adf2636ae
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-at com.twoplugs.test.TP001_Singup_Invalid_User.signupInvalidUsername(TP001_Singup_Invalid_User.java:62)
-... 28 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- editService -->
+        <test-method signature="deleteService()[pri:5, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:46 EST" name="deleteService" finished-at="2023-03-07T12:29:47 EST" duration-ms="979" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signupInvalidUsername -->
-        <test-method signature="signupInvalidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP001_Singup_Invalid_User@650eab8]" started-at="2023-02-28T00:21:17 EST" name="signupInvalidUsername" data-provider="signUpData" finished-at="2023-02-28T00:21:19 EST" duration-ms="2522" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[!@##$%^]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[abcdefg]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[No Alert Message]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: No Alert Message
-at org.testng.Assert.fail(Assert.java:85)
-at com.twoplugs.test.TP001_Singup_Invalid_User.signupInvalidUsername(TP001_Singup_Invalid_User.java:68)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='alert alert-danger text-center']"}
-  (Session info: chrome=110.0.5481.178)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.0', revision: '87802e897b'
-System info: host: 'DESKTOP-7MPKD8K', ip: '10.0.0.93', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5f597cf9aff19643c494007adf2636ae, findElement {using=xpath, value=//div[@class='alert alert-danger text-center']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\USER\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52533}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52533/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5f597cf9aff19643c494007adf2636ae
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-at com.twoplugs.test.TP001_Singup_Invalid_User.signupInvalidUsername(TP001_Singup_Invalid_User.java:62)
-... 28 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signupInvalidUsername -->
-        <test-method signature="signupInvalidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP001_Singup_Invalid_User@650eab8]" started-at="2023-02-28T00:21:19 EST" name="signupInvalidUsername" data-provider="signUpData" finished-at="2023-02-28T00:21:22 EST" duration-ms="2496" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[@#$%^^((&^(]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[No Alert Message]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: No Alert Message
-at org.testng.Assert.fail(Assert.java:85)
-at com.twoplugs.test.TP001_Singup_Invalid_User.signupInvalidUsername(TP001_Singup_Invalid_User.java:68)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='alert alert-danger text-center']"}
-  (Session info: chrome=110.0.5481.178)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.0', revision: '87802e897b'
-System info: host: 'DESKTOP-7MPKD8K', ip: '10.0.0.93', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5f597cf9aff19643c494007adf2636ae, findElement {using=xpath, value=//div[@class='alert alert-danger text-center']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\USER\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52533}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52533/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5f597cf9aff19643c494007adf2636ae
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-at com.twoplugs.test.TP001_Singup_Invalid_User.signupInvalidUsername(TP001_Singup_Invalid_User.java:62)
-... 28 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signupInvalidUsername -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.twoplugs.test.TP001_Singup_Invalid_User@650eab8]" started-at="2023-02-28T00:21:22 EST" name="closeApplication" finished-at="2023-02-28T00:21:25 EST" duration-ms="3196" status="PASS">
+        </test-method> <!-- deleteService -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:47 EST" name="closeApplication" finished-at="2023-03-07T12:29:51 EST" duration-ms="3269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- com.twoplugs.test.TP001_Singup_Invalid_User -->
-      <class name="com.twoplugs.test.TP_002_Login_Valid_EmailPassword">
-        <test-method is-config="true" signature="loadLoginPage()[pri:0, instance:com.twoplugs.test.TP_002_Login_Valid_EmailPassword@652a7737]" started-at="2023-02-28T00:20:45 EST" name="loadLoginPage" finished-at="2023-02-28T00:20:47 EST" duration-ms="2011" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadLoginPage -->
-        <test-method signature="loginValidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP_002_Login_Valid_EmailPassword@652a7737]" started-at="2023-02-28T00:20:52 EST" name="loginValidUsername" data-provider="ValidLoginData" finished-at="2023-02-28T00:20:58 EST" duration-ms="6251" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Linet]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[twoplugs2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginValidUsername -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.twoplugs.test.TP_002_Login_Valid_EmailPassword@652a7737]" started-at="2023-02-28T00:21:25 EST" name="closeApplication" finished-at="2023-02-28T00:21:28 EST" duration-ms="3219" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApplication -->
-      </class> <!-- com.twoplugs.test.TP_002_Login_Valid_EmailPassword -->
-    </test> <!-- Test -->
-  </suite> <!-- Two Plugs Automation Test -->
+      </class> <!-- com.twoplugs.test.TP_007_Create_Update_Delete_Service -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

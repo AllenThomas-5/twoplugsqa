@@ -5,13 +5,14 @@
     <parameter name="password" value="twoplugs2"/>
     <parameter name="username" value="Linet"/>
     <classes>
-      <class name="com.twoplugs.test.TP001_Singup_Invalid_User">
+      <class name="com.twoplugs.test.TP_019_Change_Network">
         <methods>
           <include name="closeApplication"/>
-          <include name="signupInvalidUsername" invocation-numbers="0 1 2"/>
-          <include name="loadSignUpPage"/>
+          <include name="changeNetwrok"/>
+          <include name="loadLoginPage"/>
+          <include name="loginValidUsername" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.twoplugs.test.TP001_Singup_Invalid_User -->
+      </class> <!-- com.twoplugs.test.TP_019_Change_Network -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Two Plugs Automation Test] -->

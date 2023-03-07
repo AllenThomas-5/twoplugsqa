@@ -2,6 +2,8 @@ package com.twoplugs.test;
 
 import static org.testng.Assert.assertTrue;
 
+import java.time.Duration;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -15,7 +17,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TP_005_Search_for_Service {
+public class TP_011_Want_Button{
 	WebDriver driver;
 	String rootPath;
 	Logger log = LogManager.getLogger(InitialTest.class);
@@ -35,7 +37,7 @@ public class TP_005_Search_for_Service {
 	  
 	//Test to Login Valid User
 
-	@Test(dataProvider="ValidLoginData")
+	@Test(priority=1 , dataProvider="ValidLoginData")
 	public void loginValidUsername(String username, String password) throws InterruptedException {
 		System.out.println("Login Valid User function");
 		
@@ -65,18 +67,80 @@ public class TP_005_Search_for_Service {
 	}
 	
 	// Test to serch for services after logging in
-	@Test
-	public void searchForServices() {
+	@Test(priority=2, dataProvider="ServiceData")
+	public void searchForServices( String serviceName) {
 		// Get the search elements and click on the search button
 		WebElement searchField = driver.findElement(By.xpath("//input[@id='exampleInputAmount']"));
 		WebElement search_btn = driver.findElement(By.xpath("//button[@class='btn-search']"));
-		searchField.sendKeys("Cleaning");
+		searchField.sendKeys(serviceName);
 		search_btn.click();
 		
 		// Check if the search table exists
 		boolean isResultTable = driver.findElement(By.xpath("//table[@class='result-table']")).isDisplayed();
 		assertTrue(isResultTable);
 	}
+	
+	//Data Provider for Service
+	@DataProvider(name = "ServiceData")
+	String[][] serviceData_method(){
+		String[][]  data = {{"Dental"}};
+		return data;
+	}
+	
+	@Test(priority=3)
+	public void clickOnService() throws InterruptedException {
+		
+		Boolean isServiceDetails = true;
+		
+		//Select the Services Tab
+		WebElement service_tab_element = driver.findElement(By.xpath("//div[@class='menu-new']//ul//li[@id='tabs']"));
+		service_tab_element.click();
+		
+		Thread.sleep(5000);
+		
+		//Select the Link
+		WebElement service_link = driver.findElement(By.xpath("//table//div//div[@class='fixWrapper']//div//a"));
+		service_link.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		
+		// Check the service Page is Loaded || Get the Title of the Section
+		WebElement service_detail_element = driver.findElement(By.xpath("//section[@class='viewService detailsSect serviceTheme']//div//div[@class='row box-group']//div//div//div//div[@class='help clearfix']"));
+		String service_page_heading = service_detail_element.getText();
+		System.out.println("The Heading is " + service_page_heading );
+		
+		
+		assertTrue(isServiceDetails);
+		
+	}
+	
+	
+	@Test(priority=4)
+	public void clickOnWant() throws InterruptedException {
+		
+		Boolean isNegotiate = false;
+		
+		String expected_title = "Buy Service";
+		
+		//Select the Negotiate Button
+		WebElement negotiate_button_element = driver.findElement(By.xpath("//section[@class='viewService detailsSect serviceTheme']//div//div[@class='text-right row']//div//a[@id='buy_button']"));
+		negotiate_button_element.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		
+		// Check the Bid Modal Title
+		WebElement bid_modal_element = driver.findElement(By.xpath("//div[@id='buyservicemodal']//div//div//div//h4[@class='modal-title']"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		
+		String bid_modal_title = bid_modal_element.getAttribute("innerHTML");
+		System.out.println("The Modal Heading is " + bid_modal_title );
+		
+		isNegotiate = expected_title.equals(bid_modal_title);
+		
+		assertTrue(isNegotiate);
+		
+	}
+
 
 	// Function to close the browser
 	@AfterSuite

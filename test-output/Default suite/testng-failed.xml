@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.twoplugs.test.TP001_Singup_Invalid_User">
+      <class name="com.twoplugs.test.TP_007_Create_Update_Delete_Service">
         <methods>
+          <include name="deleteService"/>
           <include name="closeApplication"/>
-          <include name="signupInvalidUsername"/>
           <include name="loadLoginPage"/>
         </methods>
-      </class> <!-- com.twoplugs.test.TP001_Singup_Invalid_User -->
+      </class> <!-- com.twoplugs.test.TP_007_Create_Update_Delete_Service -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
