@@ -3,7 +3,11 @@
   <groupId>com.twoplugs</groupId>
   <artifactId>twoplugs-automation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <dependencies>
+    <properties>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+    </properties>
+    <dependencies>
   
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 	<dependency>
