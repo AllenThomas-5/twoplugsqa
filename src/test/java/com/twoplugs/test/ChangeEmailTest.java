@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -22,12 +23,12 @@ public class ChangeEmailTest {
 
     @BeforeTest
     public void setup() {
-//        WebDriverManager.chromedriver().setup();
-//        System.setProperty("webdriver.chrome.driver", "C:\juan\Tools\BrowsersExeForSelenium\Firefox\\chromedriver.exe");
-//        driver = new ChromeDriver();
-        WebDriverManager.edgedriver().setup();
-        System.setProperty("webdriver.edge.driver", "C:\\juan\\Tools\\BrowsersExeForSelenium\\Edge\\edgedriver_win64\\msedgedriver.exe");
-        driver = new EdgeDriver();
+        WebDriverManager.firefoxdriver().setup();
+        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+        driver = new FirefoxDriver();
+//        WebDriverManager.edgedriver().setup();
+//        System.setProperty("webdriver.edge.driver", "C:\\juan\\Tools\\BrowsersExeForSelenium\\Edge\\edgedriver_win64\\msedgedriver.exe");
+//        driver = new EdgeDriver();
         driver.manage().window().maximize();
     }
 
