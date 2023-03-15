@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -32,8 +33,10 @@ public class TP_009_Editing_Profile {
 		//Set root path
 		rootPath = System.getProperty("user.dir");
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-	
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+		options.addArguments("--remote-allow-origins=*");
+		driver = new ChromeDriver(options);
 		driver.get("https://qatest.twoplugs.com/login");
 		driver.manage().window().maximize();
 		log.info("Initiated The Suite");

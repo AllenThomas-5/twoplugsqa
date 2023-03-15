@@ -19,10 +19,23 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TP_007_Create_Update_Delete_Service {
+public class TP_008_Create_Update_Delete_Need {
 	WebDriver driver;
 	String rootPath;
 	Logger log = LogManager.getLogger(InitialTest.class);
+	
+	
+	//A method to click Profile in menubar
+	public void goToProfilePageMethod() {
+		
+		WebElement profile_link_menubar = driver.findElement(By.xpath("//ul[@class='nav navbar-nav']//li[4]"));
+		profile_link_menubar.click();
+		
+		WebElement profile_link = driver.findElement(By.xpath("//ul[@class='nav navbar-nav']//li[4]/ul/li[1]/a"));
+		profile_link.click();
+		
+	}
+	
 	
 	//Function to launch the Browser
 	@BeforeSuite 
@@ -39,7 +52,6 @@ public class TP_007_Create_Update_Delete_Service {
 		driver.manage().window().maximize();
 		log.info("Initiated The Suite");
 	}
-	  
 	  
 	//Test to Login Valid User
 
@@ -86,23 +98,24 @@ public class TP_007_Create_Update_Delete_Service {
 	
 	// Test to Create New Service
 	@Test(priority=3)
-	public void creatNewService() throws InterruptedException {
+	public void creatNewNeed() throws InterruptedException {
 		
 		Boolean isCreated = true;
 		
-		//Get Create new Service Button
-		WebElement new_service_btn = driver.findElement(By.xpath("//div[@class='text-center']//a[@href='/addservices/1']"));
-		new_service_btn.click();
+		//Get Create new Need Button
+		WebElement new_need_btn = driver.findElement(By.xpath("//div[@class='text-center']//a/span[contains(text(),'New NEED')]"));
+		new_need_btn.click();
 		
 		//Wait For It
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-		//Create Service Page
+		//At Create Need Page
 		
 		//Title
-		driver.findElement(By.xpath("//input[@name='name']")).sendKeys("Cuddle Therapy");
+		driver.findElement(By.xpath("//input[@name='name']")).sendKeys("Drum Tutor");
 		//Description
-		driver.findElement(By.xpath("//textarea[@name='description']")).sendKeys("A service to reduce Stress");
+		driver.findElement(By.xpath("//textarea[@name='description']")).sendKeys("Need to Learn Drums");
+		
 		//Category
 		WebElement category_dropdown = driver.findElement(By.xpath("//select[@name='category_id']"));
 		Select se_category_dropdown = new Select(category_dropdown );
@@ -111,10 +124,7 @@ public class TP_007_Create_Update_Delete_Service {
 		WebElement sub_category_dropdown = driver.findElement(By.xpath("//select[@name='subcategory_id']"));
 		Select se_sub_category_dropdown = new Select(sub_category_dropdown );
 		se_sub_category_dropdown.selectByVisibleText("Misc");
-		//Price
-		driver.findElement(By.xpath("//input[@name='price']")).sendKeys("100");
-		//RefunValid
-		driver.findElement(By.xpath("//input[@name='refund_valid']")).sendKeys("0");
+		
 		//Youtube
 		driver.findElement(By.xpath("//input[@name='videourl']")).sendKeys("https://www.youtube.com/watch?v=8fWHk7OZ12o");
 		//Create Button
@@ -123,7 +133,10 @@ public class TP_007_Create_Update_Delete_Service {
 		//Wait For It
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-
+		
+		//Go To Profile page
+		
+		goToProfilePageMethod();
 		
 		Thread.sleep(2000);
 		
@@ -132,19 +145,19 @@ public class TP_007_Create_Update_Delete_Service {
 
 	// Test to edit service
 	@Test(priority=4)
-	public void editService() {
+	public void editNeed() {
 		
 		Boolean isUpdated = true;
 		
 		//Click on Edit Link
-		driver.findElement(By.xpath("//a[@class=\"pull-right edit-link\"]")).click();
+		driver.findElement(By.xpath("//div[@class='box theme-1']//table//ul//li//a")).click();
 		
 		// Change the Title
 		driver.findElement(By.xpath("//input[@name='name']")).clear();
-		driver.findElement(By.xpath("//input[@name='name']")).sendKeys("Kick Therapy");
+		driver.findElement(By.xpath("//input[@name='name']")).sendKeys("Guitar Tutor");
 		
 		// Click on Save
-		driver.findElement(By.xpath("//ul[@class=\"line-btn pull-right\"]//li[2]//button")).click();
+		driver.findElement(By.xpath("//ul[@class='line-btn pull-right']//li[2]//button")).click();
 		
 		//Check the title
 		
@@ -154,16 +167,19 @@ public class TP_007_Create_Update_Delete_Service {
 		//Wait For It
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
+		//Go To Profile page
+		goToProfilePageMethod();
+		
 		assertTrue(isUpdated);
 		
 	}
 	
 	
 	// Test to delete service
-	@Test(priority=5)
-	public void deleteService() {
+	@Test(priority=5, enabled=true)
+	public void deleteNeed() {
 		
-		String expected_message = "Service has been deleted";
+		String expected_message = "Need has been deleted";
 		// Got To Profile Page
 		WebElement profile_link_menubar = driver.findElement(By.xpath("//ul[@class='nav navbar-nav']//li[4]"));
 		profile_link_menubar.click();
@@ -175,7 +191,7 @@ public class TP_007_Create_Update_Delete_Service {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		//Click on Delete Link
-		driver.findElement(By.xpath("//div[@class=\"box theme-2\"]//table//tr//ul[@class='control-block']//li[2]//a[@id='delete_service_link']")).click();
+		driver.findElement(By.xpath("//div[@class='box theme-1']//table//ul//li[2]")).click();
 		
 		//Wait For It
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

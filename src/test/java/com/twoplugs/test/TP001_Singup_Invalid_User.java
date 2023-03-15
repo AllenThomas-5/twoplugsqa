@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -23,19 +24,20 @@ public class TP001_Singup_Invalid_User {
 	String rootPath;
 	Logger log = LogManager.getLogger(InitialTest.class);
 	
+	//Function to launch the Browser
 	@BeforeSuite 
-	public void loadSignUpPage()  {
+	public void loadLoginPage()  {
 		System.out.println("Test1");
 		//Set root path
 		rootPath = System.getProperty("user.dir");
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-		driver.get("https://qatest.twoplugs.com/signup");
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+		options.addArguments("--remote-allow-origins=*");
+		driver = new ChromeDriver(options);
+		driver.get("https://qatest.twoplugs.com/login");
 		driver.manage().window().maximize();
 		log.info("Initiated The Suite");
-
-		
-
 	}
 	  
 

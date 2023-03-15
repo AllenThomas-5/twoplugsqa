@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.twoplugs.test.TP_007_Create_Update_Delete_Service">
+      <class name="com.twoplugs.test.TP_008_Create_Update_Delete_Need">
         <methods>
-          <include name="deleteService"/>
-          <include name="closeApplication"/>
           <include name="loadLoginPage"/>
+          <include name="editNeed"/>
+          <include name="closeApplication"/>
         </methods>
-      </class> <!-- com.twoplugs.test.TP_007_Create_Update_Delete_Service -->
+      </class> <!-- com.twoplugs.test.TP_008_Create_Update_Delete_Need -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-07T12:29:40 EST" name="Default suite" finished-at="2023-03-07T12:29:47 EST" duration-ms="7582">
+  <suite started-at="2023-03-15T11:52:51 EDT" name="Default suite" finished-at="2023-03-15T11:52:57 EDT" duration-ms="5930">
     <groups>
     </groups>
-    <test started-at="2023-03-07T12:29:40 EST" name="Default test" finished-at="2023-03-07T12:29:47 EST" duration-ms="7582">
-      <class name="com.twoplugs.test.TP_007_Create_Update_Delete_Service">
-        <test-method is-config="true" signature="loadLoginPage()[pri:0, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:35 EST" name="loadLoginPage" finished-at="2023-03-07T12:29:40 EST" duration-ms="4667" status="PASS">
+    <test started-at="2023-03-15T11:52:51 EDT" name="Default test" finished-at="2023-03-15T11:52:57 EDT" duration-ms="5930">
+      <class name="com.twoplugs.test.TP_002_Login_Valid_EmailPassword">
+        <test-method is-config="true" signature="loadLoginPage()[pri:0, instance:com.twoplugs.test.TP_002_Login_Valid_EmailPassword@45cff11c]" started-at="2023-03-15T11:52:47 EDT" name="loadLoginPage" finished-at="2023-03-15T11:52:51 EDT" duration-ms="3550" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadLoginPage -->
-        <test-method signature="loginValidUsername(java.lang.String, java.lang.String)[pri:1, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:40 EST" name="loginValidUsername" data-provider="ValidLoginData" finished-at="2023-03-07T12:29:43 EST" duration-ms="3180" status="PASS">
+        <test-method signature="loginValidUsername(java.lang.String, java.lang.String)[pri:0, instance:com.twoplugs.test.TP_002_Login_Valid_EmailPassword@45cff11c]" started-at="2023-03-15T11:52:51 EDT" name="loginValidUsername" data-provider="ValidLoginData" finished-at="2023-03-15T11:52:57 EDT" duration-ms="5876" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,27 +27,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginValidUsername -->
-        <test-method signature="goToProfilePage()[pri:2, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:43 EST" name="goToProfilePage" finished-at="2023-03-07T12:29:43 EST" duration-ms="370" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToProfilePage -->
-        <test-method signature="creatNewService()[pri:3, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:43 EST" name="creatNewService" finished-at="2023-03-07T12:29:46 EST" duration-ms="2111" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- creatNewService -->
-        <test-method signature="editService()[pri:4, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:46 EST" name="editService" finished-at="2023-03-07T12:29:46 EST" duration-ms="887" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editService -->
-        <test-method signature="deleteService()[pri:5, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:46 EST" name="deleteService" finished-at="2023-03-07T12:29:47 EST" duration-ms="979" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteService -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.twoplugs.test.TP_007_Create_Update_Delete_Service@5827af16]" started-at="2023-03-07T12:29:47 EST" name="closeApplication" finished-at="2023-03-07T12:29:51 EST" duration-ms="3269" status="PASS">
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.twoplugs.test.TP_002_Login_Valid_EmailPassword@45cff11c]" started-at="2023-03-15T11:52:57 EDT" name="closeApplication" finished-at="2023-03-15T11:53:00 EDT" duration-ms="3212" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- com.twoplugs.test.TP_007_Create_Update_Delete_Service -->
+      </class> <!-- com.twoplugs.test.TP_002_Login_Valid_EmailPassword -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

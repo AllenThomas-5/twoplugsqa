@@ -1,6 +1,9 @@
 package com.twoplugs.test;
 
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
+
+import java.time.Duration;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,14 +15,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TP_003_Invalid_User_Login {
-
-
+public class TP018_Testing_Refund {
 	WebDriver driver;
 	String rootPath;
 	Logger log = LogManager.getLogger(InitialTest.class);
@@ -39,20 +39,13 @@ public class TP_003_Invalid_User_Login {
 		driver.manage().window().maximize();
 		log.info("Initiated The Suite");
 	}
-	  
+	//Test to Login Valid User
 
-	@Test(dataProvider = "InvalidLoginData")
-	@Parameters ({"username","password"})
-	public void signupInvalidUsername(String username, String password) throws InterruptedException {
-		System.out.println("SignUp Invalid Username");
+	@Test(priority=1 , dataProvider="ValidLoginData")
+	public void loginValidUsername(String username, String password) throws InterruptedException {
+		System.out.println("Login Valid User function");
 		
-
-		
-		//Expected Error Message
-		//String expectedErrorMessage = "INVALID EMAIL/PASSWORD.";
-
-		
-		// Get the Username and Password element
+		// Get the Username Password and Login button element
 		WebElement username_element = driver.findElement(By.xpath("//input[@name='email']"));
 		WebElement password_element = driver.findElement(By.xpath("//input[@name='password']"));
 		WebElement login_btn = driver.findElement(By.xpath("//span[contains(text(),'LOG IN')]"));
@@ -63,20 +56,56 @@ public class TP_003_Invalid_User_Login {
 		login_btn.click();
 		Thread.sleep(5000);
 		
+		//Check Profile is Displayed
 		
-	//Check Error Message is Displayed
-		
-		Boolean invalid_alert =  driver.findElement(By.xpath("//div[@class='alert alert-danger text-center']")).isDisplayed();
-		assertTrue(invalid_alert);
+		Boolean profileInformation_isVisible =  driver.findElement(By.xpath("//div[@class='profile-information']")).isDisplayed();
+		assertTrue(profileInformation_isVisible);
 	}
 	
+	
 	//Data Provider for Login credentials
-	@DataProvider(name = "InvalidLoginData")
+	@DataProvider(name = "ValidLoginData")
 	String[][] loginData_method(){
-		String[][]  data = {{"1234@123.com","12345"}};
+		String[][]  data = {{"Linet","twoplugs2"}};
 		return data;
 	}
-
+	
+	//Goto Transaction Page 
+	
+	// Test to search for services after logging in
+	@Test(priority=2)
+	public void goToTransactionPage() {
+		
+		WebElement transaction_link_menubar = driver.findElement(By.xpath("//ul[@class='nav navbar-nav']//li[2]"));
+		transaction_link_menubar.click();
+		//Wait For It
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	}
+	
+	// Check Refund Button
+	@Test
+	public void refundButton() {
+		
+		//Select Refund Button
+		Boolean reund_button_present = driver.findElements(By.xpath("//table[@class='table-Colorful color-3 stacktable large-only']//tr[1]/td[7]/a[@class='servicerefund default']")).size() != 0;
+		
+		//Wait For It
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		
+		// Check for Refund Button
+		if (reund_button_present) {
+			assertTrue(reund_button_present, "Refund button Exists");
+			WebElement refund_button = driver.findElement(By.xpath("//table[@class='table-Colorful color-3 stacktable large-only']//tr[1]/td[7]/a[@class='servicerefund default']"));
+			refund_button.click();
+		}
+		else {
+			assertFalse(reund_button_present, "Refund button Does not Exist");
+		}
+	
+	}
+	
+	// Function to close the browser
 	@AfterSuite
 	public void closeApplication() throws InterruptedException {
 		
@@ -85,5 +114,4 @@ public class TP_003_Invalid_User_Login {
 		driver.quit();
 		
 	}
-	
 }
